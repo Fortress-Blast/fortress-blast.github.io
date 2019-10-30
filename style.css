@@ -35,12 +35,15 @@ p {
 }
 
 .fb-topbar table tbody tr th {
+  padding: 0px;
+}
+
+.fb-topbar-button {
   background-color: #FC7215;
   border: 3px solid black;
-  border-bottom: none;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  padding: 0px;
+  padding: 6px;
 }
 
 .fb-body {
