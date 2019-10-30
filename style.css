@@ -33,7 +33,7 @@ a, p, ul, th, td {
   margin-right: 35px;
 }
 
-table thead tr th, .fb-body table tbody tr td {
+.table thead tr th, .table tbody tr td {
   border: none;
 }
 
