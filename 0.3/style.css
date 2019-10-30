@@ -100,3 +100,16 @@ p, ul, th, td, .btn {
 	letter-spacing: 0px;
 	padding-right: 0px;
 }
+
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: white;
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  margin-left: -1em;
+}
