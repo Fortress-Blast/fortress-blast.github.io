@@ -95,6 +95,8 @@ p, ul, th, td, .btn {
 .fb-body table .name {
   font-family: Arial, sans-serif;
   font-size: 12px;
+  font-weight: bold;
   text-align: center;
   letter-spacing: 0px;
+  padding-right: 0px;
 }
