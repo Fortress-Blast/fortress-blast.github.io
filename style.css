@@ -42,6 +42,7 @@ p {
 .fb-topbar table tbody tr th .btn {
   background-color: #FC7215;
   border: 3px solid black;
+  border-bottom: none;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 6px;
