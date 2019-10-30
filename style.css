@@ -21,7 +21,7 @@ img {
   margin-bottom: 16px;
 }
 
-p {
+a, p, ul, th, td {
   font-family: "Dom Casual", Arial, sans-serif;
   font-size: 30px;
   letter-spacing: -2px;
@@ -48,9 +48,6 @@ p {
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
-  font-family: "Dom Casual", Arial, sans-serif;
-  font-size: 30px;
-  letter-spacing: -2px;
   padding: 0px;
   width: 100%;
 }
@@ -78,4 +75,21 @@ p {
   border-radius: 35px;
   padding: 20px;
   padding-bottom: 4px;
+}
+
+.fb-body table {
+  background-color: #3CEAFF;
+  box-shadow: -3px 8px 5px rgba(0, 0, 0, 0.5) inset, 3px -8px 5px white inset;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.fb-body table thead tr th, .fb-body table tbody tr th {
+  border: none;
+}
+
+.fb-body table tbody tr .name {
+  font-family: Arial, sans-serif;
+  font-size: 12px;
+  text-align: center;
 }
