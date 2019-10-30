@@ -29,13 +29,17 @@ p {
 .fb-topbar {
   margin-left: 35px;
   margin-right: 35px;
-  margin-bottom: 0px;
 }
 
-.fb-topbar tbody tr th {
+.fb-topbar table {
+  background-color: #FC7215;
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
+  margin-bottom: none;
+}
+
+.fb-topbar table tbody tr th {
   padding: none;
 }
 
