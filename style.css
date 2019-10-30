@@ -33,12 +33,15 @@ a, p, ul, th, td {
   margin-right: 35px;
 }
 
+table thead tr th, .fb-body table tbody tr td {
+  border: none;
+}
+
 .fb-topbar table {
   margin-bottom: 0px;
 }
 
 .fb-topbar table tbody tr th {
-  border: none;
   padding: 0px;
 }
 
@@ -81,15 +84,11 @@ a, p, ul, th, td {
   background-color: #3CEAFF;
   box-shadow: -3px 8px 5px rgba(0, 0, 0, 0.5) inset, 3px -8px 5px white inset;
   border: 3px solid black;
-  border-radius: 10px;
-}
-
-.fb-body table thead tr th, .fb-body table tbody tr th {
-  border: none;
 }
 
 .fb-body table tbody tr .name {
   font-family: Arial, sans-serif;
   font-size: 12px;
   text-align: center;
+  letter-spacing: 0px;
 }
