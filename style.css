@@ -34,7 +34,7 @@ p, ul, th, td, .btn {
 }
 
 .table td, .table th {
-  border: none;
+  border: none !important;
 }
 
 .fb-topbar table {
