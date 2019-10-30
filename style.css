@@ -33,7 +33,7 @@ p, ul, th, td, .btn {
   margin-right: 35px;
 }
 
-.table thead tr th, .table tbody tr td {
+.table th, .table td {
   border: none;
 }
 
