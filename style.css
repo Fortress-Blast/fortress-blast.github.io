@@ -43,6 +43,7 @@ p {
 
 .fb-topbar table tbody tr th .btn {
   background-color: #FC7215;
+  box-shadow: -3px -3px 5px black inset, 3px 3px 5px white inset;
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
@@ -55,7 +56,7 @@ p {
 
 .fb-topbar table tbody tr th .btn span {
   display: inline-block;
-  transform: scale(1, 0.5);
+  transform: scale(1, 0.75);
 }
 
 .fb-body {
