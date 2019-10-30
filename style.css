@@ -39,13 +39,13 @@ p {
 .fb-topbar table tbody tr th {
   border: none;
   padding: 0px;
-}
-
-.fb-topbar table tbody tr th .btn {
   background-color: #FC7215;
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
+}
+
+.fb-topbar table tbody tr th .btn {
   font-family: "Dom Casual", Arial, sans-serif;
   font-size: 30px;
   letter-spacing: -2px;
