@@ -21,7 +21,7 @@ img {
   margin-bottom: 16px;
 }
 
-a, p, ul, th, td {
+p, ul, th, td, .btn {
   font-family: "Dom Casual", Arial, sans-serif;
   font-size: 30px;
   letter-spacing: -2px;
