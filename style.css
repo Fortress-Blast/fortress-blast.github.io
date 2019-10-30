@@ -1,6 +1,6 @@
 @font-face {
-  font-family: 'dom_casualregular';
-  src: url('domcasual-webfont.woff2') format('woff2'), url('domcasual-webfont.woff') format('woff');
+  font-family: "dom_casualregular";
+  src: url("domcasual-webfont.woff2") format("woff2"), url("domcasual-webfont.woff") format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -11,5 +11,5 @@ body {
   background-position: center; 
   background-size: cover;
   background-repeat: no-repeat;
-  font-family: 
+  font-family: "dom_casualregular";
 }
