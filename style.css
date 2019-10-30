@@ -24,6 +24,7 @@ img {
 p {
   font-family: "Dom Casual", Arial, sans-serif;
   font-size: 30px;
+  letter-spacing: -2px;
 }
 
 .fb-topbar {
@@ -47,6 +48,8 @@ p {
   border-radius: 15px 15px 0px 0px;
   font-family: "Dom Casual", Arial, sans-serif;
   font-size: 30px;
+  letter-spacing: -2px;
+  transform: scale(1, 0.5);
   padding: 6px;
   width: 100%;
 }
