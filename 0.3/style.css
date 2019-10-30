@@ -1,0 +1,102 @@
+@font-face {
+	font-family: "Dom Casual";
+	src: url("https://fortress-blast.github.io/fonts/domcasual-webfont.woff2") format("woff2"), url("https://fortress-blast.github.io/fonts/domcasual-webfont.woff") format("woff"), url("https://fortress-blast.github.io/fonts/domcasual.ttf") format("truetype");
+	font-weight: normal;
+	font-style: normal;
+}
+
+body {
+	background-attachment: fixed;
+	background-image: url("https://fortress-blast.github.io/images/background.jpg");
+	background-position: center; 
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+
+.container-fluid {
+	padding: 15px;
+}
+
+img {
+	margin-bottom: 16px;
+}
+
+p, ul, th, td, .btn {
+	font-family: "Dom Casual", Arial, sans-serif;
+	font-size: 30px;
+	letter-spacing: -2px;
+	line-height: 0.95;
+}
+
+.fb-topbar {
+	margin-left: 35px;
+	margin-right: 35px;
+}
+
+.table td, .table th {
+	border: none !important;
+}
+
+.fb-topbar table {
+	margin-bottom: 0px;
+}
+
+.fb-topbar table th {
+	padding: 0px;
+}
+
+.fb-topbar table .btn {
+	background-color: #FC7215;
+	box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.5) inset, -2px 6px 5px white inset;
+	border: 3px solid black;
+	border-bottom: none;
+	border-radius: 15px 15px 0px 0px;
+	padding: 0px;
+	width: 100%;
+	font-size: 30px;
+}
+
+.fb-topbar table .btn:hover {
+	background-color: #F98F48;
+	color: white;
+	text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
+}
+
+.fb-topbar table .selected {
+	background-color: #E06514;
+	box-shadow: -2px 6px 5px rgba(0, 0, 0, 0.25) inset, 2px -1px 5px white inset;
+}
+
+.fb-topbar table .btn span {
+	display: inline-block;
+	transform: scale(1, 0.75);
+}
+
+.fb-body {
+	background-color: #FC7215;
+	box-shadow: 3px -8px 5px rgba(0, 0, 0, 0.5) inset, -3px 8px 5px white inset;
+	border: 3px solid black;
+	border-radius: 35px;
+	padding: 20px;
+	padding-bottom: 4px;
+}
+
+.fb-body table {
+	background-color: #3CEAFF;
+	box-shadow: -3px 8px 5px rgba(0, 0, 0, 0.5) inset, 3px -8px 5px white inset;
+	border: 3px solid black;
+}
+
+.fb-body table img {
+	width: 90px;
+	height: 90px;
+}
+
+.fb-body table .name {
+	font-family: Arial, sans-serif;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+	letter-spacing: 0px;
+	padding-right: 0px;
+}
