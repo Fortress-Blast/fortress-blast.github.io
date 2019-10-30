@@ -66,4 +66,5 @@ p {
   border: 3px solid black;
   border-radius: 35px;
   padding: 20px;
+  padding-bottom: 4px;
 }
