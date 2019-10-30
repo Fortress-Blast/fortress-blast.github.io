@@ -26,14 +26,13 @@ p {
   margin-right: 35px;
 }
 
-.fb-topbar table {
+.fb-topbar .table {
   margin-bottom: none;
 }
 
-.fb-topbar table tbody tr th {
+.fb-topbar .table tbody tr th {
   background-color: #FC7215;
   border: 3px solid black;
-  border-bottom: none;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: none;
