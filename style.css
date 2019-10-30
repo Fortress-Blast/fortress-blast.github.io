@@ -1,1 +1,5 @@
-
+body {
+  background-image: url("https://fortress-blast.github.io/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
