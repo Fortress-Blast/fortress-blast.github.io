@@ -27,10 +27,11 @@ p {
   margin-bottom: 0px;
 }
 
-.fb-topbar thead tr th {
+.fb-topbar tbody tr th {
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
+  padding: none;
 }
 
 .fb-body {
