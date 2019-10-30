@@ -20,3 +20,14 @@ img {
 p {
   font-family: "Dom Casual", Arial, sans-serif;
 }
+
+.fb-topbar {
+  margin-left: 35px;
+  margin-right: 35px;
+}
+
+.fb-body {
+  background-color: #FC7215;
+  border: 3px solid black;
+  border-radius: 35px;
+}
