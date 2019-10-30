@@ -54,6 +54,7 @@ p {
 }
 
 .fb-topbar table tbody tr th .btn span {
+  display: inline-block;
   transform: scale(1, 0.5);
 }
 
