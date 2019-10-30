@@ -1,5 +1,6 @@
 body {
   background-image: url("https://fortress-blast.github.io/background.jpg");
+  background-position: center; 
   background-size: cover;
   background-repeat: no-repeat;
 }
