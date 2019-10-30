@@ -62,7 +62,7 @@ p {
 
 .fb-body {
   background-color: #FC7215;
-  box-shadow: 2px 6px 10px rgba(0, 0, 0, 0.5) inset, -2px 6px 10px white inset;
+  box-shadow: 3px 8px 5px rgba(0, 0, 0, 0.5) inset, -3px 8px 5px white inset;
   border: 3px solid black;
   border-radius: 35px;
   padding-top: 16px;
