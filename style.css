@@ -38,12 +38,14 @@ p {
   padding: 0px;
 }
 
-.fb-topbar-button {
+.fb-topbar table tbody tr th .btn {
   background-color: #FC7215;
   border: 3px solid black;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
   padding: 6px;
+  text
+  width: 100%;
 }
 
 .fb-body {
