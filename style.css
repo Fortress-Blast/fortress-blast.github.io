@@ -13,6 +13,10 @@ body {
   background-repeat: no-repeat;
 }
 
+.container-fluid {
+  padding: 15px;
+}
+
 img {
   margin-bottom: 16px;
 }
