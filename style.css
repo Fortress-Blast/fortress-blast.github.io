@@ -44,7 +44,7 @@ p {
 
 .fb-topbar table tbody tr th .btn {
   background-color: #FC7215;
-  box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.25) inset, -3px 3px 5px white inset;
+  box-shadow: 3px -3px 5px rgba(0, 0, 0, 0.5) inset, -3px 3px 5px white inset;
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
@@ -62,6 +62,7 @@ p {
 
 .fb-body {
   background-color: #FC7215;
+  box-shadow: 3px -3px 10px rgba(0, 0, 0, 0.5) inset, -3px 3px 10px white inset;
   border: 3px solid black;
   border-radius: 35px;
   padding-top: 16px;
