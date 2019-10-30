@@ -39,19 +39,22 @@ p {
 .fb-topbar table tbody tr th {
   border: none;
   padding: 0px;
+}
+
+.fb-topbar table tbody tr th .btn {
   background-color: #FC7215;
   border: 3px solid black;
   border-bottom: none;
   border-radius: 15px 15px 0px 0px;
-}
-
-.fb-topbar table tbody tr th .btn {
   font-family: "Dom Casual", Arial, sans-serif;
   font-size: 30px;
   letter-spacing: -2px;
-  transform: scale(1, 0.5);
-  padding: 6px;
+  padding: 0px;
   width: 100%;
+}
+
+.fb-topbar table tbody tr th .btn span {
+  transform: scale(1, 0.5);
 }
 
 .fb-body {
