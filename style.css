@@ -33,7 +33,7 @@ p, ul, th, td, .btn {
   margin-right: 35px;
 }
 
-.table th, .table td {
+.table td, .table th {
   border: none;
 }
 
@@ -53,6 +53,7 @@ p, ul, th, td, .btn {
   border-radius: 15px 15px 0px 0px;
   padding: 0px;
   width: 100%;
+  font-size: 30px;
 }
 
 .fb-topbar table tbody tr th .btn:hover {
