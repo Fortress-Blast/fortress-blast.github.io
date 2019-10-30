@@ -41,11 +41,11 @@ p, ul, th, td, .btn {
   margin-bottom: 0px;
 }
 
-.fb-topbar table tbody tr th {
+.fb-topbar table th {
   padding: 0px;
 }
 
-.fb-topbar table tbody tr th .btn {
+.fb-topbar table .btn {
   background-color: #FC7215;
   box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.5) inset, -2px 6px 5px white inset;
   border: 3px solid black;
@@ -56,18 +56,18 @@ p, ul, th, td, .btn {
   font-size: 30px;
 }
 
-.fb-topbar table tbody tr th .btn:hover {
+.fb-topbar table .btn:hover {
   background-color: #F98F48;
   color: white;
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.5);
 }
 
-.fb-topbar table tbody tr th .selected {
+.fb-topbar table .selected {
   background-color: #E06514;
   box-shadow: -2px 6px 5px rgba(0, 0, 0, 0.25) inset, 2px -1px 5px white inset;
 }
 
-.fb-topbar table tbody tr th .btn span {
+.fb-topbar table .btn span {
   display: inline-block;
   transform: scale(1, 0.75);
 }
@@ -87,7 +87,12 @@ p, ul, th, td, .btn {
   border: 3px solid black;
 }
 
-.fb-body table tbody tr .name {
+.fb-body table img {
+  width: 85px;
+  height: 85px;
+}
+
+.fb-body table .name {
   font-family: Arial, sans-serif;
   font-size: 12px;
   text-align: center;
