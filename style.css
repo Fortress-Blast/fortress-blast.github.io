@@ -43,8 +43,7 @@ p {
   background-color: #FC7215;
   border: 3px solid black;
   border-bottom: none;
-  border-top-left-radius: 15px;
-  border-top-right-radius: 15px;
+  border-radius: 15px 15px 0px 0px;
   font-family: "Dom Casual", Arial, sans-serif;
   padding: 6px;
   width: 100%;
