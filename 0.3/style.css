@@ -33,7 +33,9 @@ img {
 }
 
 .fb-emblem {
-	width: 60px;
+	margin-top: 16px;
+	margin-bottom: 0px;
+	width: 100px;
 }
 
 p, ul, th, td, .btn {
