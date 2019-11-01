@@ -21,6 +21,21 @@ img {
 	margin-bottom: 16px;
 }
 
+.fb-logo, .fb-emblem {
+	display: block;
+	height: auto;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.fb-logo {
+	width: 100%;
+}
+
+.fb-emblem {
+	width: 60px;
+}
+
 p, ul, th, td, .btn {
 	font-family: "Dom Casual", Arial, sans-serif;
 	font-size: 30px;
