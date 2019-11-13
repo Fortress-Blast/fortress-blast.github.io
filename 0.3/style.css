@@ -118,6 +118,15 @@ p, ul, th, td, .btn {
 	padding-right: 0px;
 }
 
+.fb-body .gift {
+	text-align: center;
+}
+
+.fb-body .gift img {
+	width: 128px;
+	height: 128px;
+}
+
 ul {
 	list-style: none;
 }
