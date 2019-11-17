@@ -16,18 +16,19 @@
 				<table class="table">
 					<tbody><tr>
 						<script>
-	var url = new URLSearchParams(window.location.search);
-	var powerbit = url.get('powerups-enabled');
-	document.write('<th><a class="btn" href="index.html?powerups-enabled=' + powerbit + '" role="button"><span>Introduction</span></a></th>');
-	document.write('<th><a class="btn selected" role="button"><span>Powerups</span></a></th>');
-	document.write('<th><a class="btn" href="gifthunt.html?powerups-enabled=' + powerbit + '" role="button"><span>Gift Hunt</span></a></th>');
-	document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '" role="button"><span>Credits</span></a></th>');
-</script>
+							var url = new URLSearchParams(window.location.search);
+							var action = url.get('action');
+							var powerbit = url.get('powerups-enabled');
+							document.write('<th><a class="btn" href="index.html?powerups-enabled=' + powerbit + '&action=' + action + '" role="button"><span>Introduction</span></a></th>');
+							document.write('<th><a class="btn selected" role="button"><span>Powerups</span></a></th>');
+							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '" role="button"><span>Credits</span></a></th>');
+						</script>
 					</tr></tbody>
 				</table>
 			</div>
 			<div class="fb-body">
-				<p>The following is a complete list of powerups available in this version of Fortress Blast:</p>
+				<p>The following is a complete list of powerups active on the current server:</p>
+				<noscript><p><span style="color: #BD5610">Unfortunately, because you have JavaScript disabled, all powerups are currently listed.</span></p></noscript>
 				<table class="table">
 					<thead><tr>
 						<th scope="col">Powerup</th>
@@ -36,45 +37,63 @@
 					<tbody>
 						<noscript><p><font color="red">Note: This page works best with JavaScript enabled.</font></p></noscript>
 						<tr>
+						<tr id="powerup-7">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_blast.png"><br>Blast</td>
 							<td>Upon use, Blast creates an explosion at your location, dealing higher damage to closer enemies. Combine with other sources of damage for quicker kills.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-9">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_frosttouch.png"><br>Frost Touch</td>
 							<td>Using Frost Touch allows you to turn enemies you touch into ice statues for 3 seconds. The powerup itself lasts 8 seconds, so make good use of it.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-5">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_gyrocopter.png"><br>Gyrocopter</td>
-							<td>The Gyrocopter powerup lowers your gravity to 25% for 5 seconds. This can be used to clear large gaps or reach new heights, if you are decent at parkour.</td>
+							<td>The Gyrocopter powerup lowers your gravity to 50% for 5 seconds. This can be used to clear large gaps or reach new heights, if you are decent at parkour.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-8">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_megamann.png"><br>Mega Mann</td>
 							<td>You become giant for 10 seconds after using Mega Mann, and are overhealed to 4 times your original health before use, up to 4 times your maximum health.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-2">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_shockabsorber.png"><br>Shock Absorber</td>
 							<td>Shock Absorber allows you to resist 75% of all damage and take no knockback for 5 seconds. Use this when trying to kill a player with a high push force.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-1">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_superbounce.png"><br>Super Bounce</td>
 							<td>Super Bounce reverses your fall speed when you touch the ground and you take no fall damage for 5 seconds. Use it from great heights to surprise your enemies.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-4">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_superjump.png"><br>Super Jump</td>
 							<td>Super Jump launches you into the air. If you jump before using this powerup, you will travel even higher, just watch out for fall damage.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-3">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_superspeed.png"><br>Super Speed</td>
 							<td>The Super Speed powerup drastically speeds up your movement, but wears off over time. It's great for dodging focused fire.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-6">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_timetravel.png"><br>Time Travel</td>
 							<td>Time Travel makes you invisible and fast for 3 seconds, but you cannot attack. Use this to your advantage to get past sentries and difficult opponents.</td>
 						</tr>
-						<tr>
+						<tr id="powerup-10">
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_mystery.png"><br>Mystery</td>
 							<td>Mystery is a completely randomised powerup. It can take on the effects of any other powerup when used. Are you feeling lucky?</td>
 						</tr>
+						<script>
+							var url = new URLSearchParams(window.location.search);
+							var powerbit = url.get('powerups-enabled');
+							var powerups = 10;
+							if (!isNaN(powerbit) && powerbit > 0 && powerbit < (Math.pow(2, powerups) - 1)) {
+								var i;
+								var newpowerbit;
+								for (i = powerups; i > 0; i--) {
+									newpowerbit = powerbit % Math.pow(2, (i - 1));
+									if (newpowerbit >= powerbit) {
+										var deleteme = document.getElementById('powerup-' + i);
+										deleteme.parentNode.removeChild(deleteme);
+									}
+									powerbit = newpowerbit;
+								}
+							}
+						</script>
 					</tbody>
 				</table>
 				<footer>
