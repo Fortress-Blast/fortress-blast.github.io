@@ -104,6 +104,11 @@ p, ul, th, td, .btn {
 	border: 3px solid black;
 }
 
+.fb-body table th {
+	font-weight: normal;
+	text-decoration: underline;
+}
+
 .fb-body table img {
 	width: 90px;
 	height: 90px;
