@@ -82,18 +82,18 @@
 						</tr>
 						<script>
 							var url = new URLSearchParams(window.location.search);
-							var powerbit = url.get('powerups-enabled');
-							var powerups = 10;
-							if (!isNaN(powerbit) && powerbit > 0 && powerbit < (Math.pow(2, powerups) - 1)) {
+							var bitfield = url.get('powerups-enabled');
+							var numberOfPowerups = 10;
+							if (!isNaN(bitfield) && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
 								var i;
-								var newpowerbit;
-								for (i = powerups; i > 0; i--) {
-									newpowerbit = powerbit % Math.pow(2, (i - 1));
-									if (newpowerbit >= powerbit) {
+								var newBitfield;
+								for (i = numberOfPowerups; i > 0; i--) {
+									newBitfield = bitfield % Math.pow(2, (i - 1));
+									if (newBitfield >= bitfield) {
 										var deleteme = document.getElementById('powerup-' + i);
 										deleteme.parentNode.removeChild(deleteme);
 									}
-									powerbit = newpowerbit;
+									bitfield = newBitfield;
 								}
 							}
 						</script>

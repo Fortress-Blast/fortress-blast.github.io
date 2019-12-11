@@ -21,13 +21,11 @@
 							var powerbit = url.get('powerups-enabled');
 							document.write('<th><a class="btn" href="index.html?powerups-enabled=' + powerbit + '&action=' + action + '" role="button"><span>Introduction</span></a></th>');
 							document.write('<th><a class="btn selected" role="button"><span>Powerups</span></a></th>');
-							document.write('<th><a class="btn" href="gifthunt.html?powerups-enabled=' + powerbit + '&action=' + action + '" role="button"><span>Gift Hunt</span></a></th>');
 							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '" role="button"><span>Credits</span></a></th>');
 						</script>
 						<noscript>
 							<th><a class="btn" href="index.html" role="button"><span>Introduction</span></a></th>
 							<th><a class="btn selected" role="button"><span>Powerups</span></a></th>
-							<th><a class="btn" href="gifthunt.html" role="button"><span>Gift Hunt</span></a></th>
 							<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
 						</noscript>
 					</tr></tbody>
@@ -88,18 +86,18 @@
 						</tr>
 						<script>
 							var url = new URLSearchParams(window.location.search);
-							var powerbit = url.get('powerups-enabled');
-							var powerups = 11;
-							if (!isNaN(powerbit) && powerbit > 0 && powerbit < (Math.pow(2, powerups) - 1)) {
+							var bitfield = url.get('powerups-enabled');
+							var numberOfPowerups = 11;
+							if (!isNaN(bitfield) && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
 								var i;
-								var newpowerbit;
-								for (i = powerups; i > 0; i--) {
-									newpowerbit = powerbit % Math.pow(2, (i - 1));
-									if (newpowerbit >= powerbit) {
+								var newBitfield;
+								for (i = numberOfPowerups; i > 0; i--) {
+									newBitfield = bitfield % Math.pow(2, (i - 1));
+									if (newBitfield >= bitfield) {
 										var deleteme = document.getElementById('powerup-' + i);
 										deleteme.parentNode.removeChild(deleteme);
 									}
-									powerbit = newpowerbit;
+									bitfield = newBitfield;
 								}
 							}
 						</script>
