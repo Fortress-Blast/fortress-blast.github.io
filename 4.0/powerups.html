@@ -101,14 +101,14 @@
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_mystery.png"><br>Mystery</td>
 							<td>Mystery is a completely randomised powerup. It can take on the effects of any other powerup when used. Are you feeling lucky?</td>
 						</tr>
-						<tr id="powerup-15">
+						<tr>
 							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_ultrapowerup.png"><br>ULTRA POWERUP!!</td>
-							<td>This very rare powerup will grant you Frost Touch, Magnetism, Shock Absorber, critical hits and Mega Mann health all at once, and more all for 10 seconds!</td>
+							<td>This very rare powerup will grant you Frost Touch, Magnetism, Shock Absorber, critical hits and Mega Mann health all at once and more, all for 10 seconds!</td>
 						</tr>
 						<script>
 							var url = new URLSearchParams(window.location.search);
 							var bitfield = url.get('powerups-enabled');
-							var numberOfPowerups = 15;
+							var numberOfPowerups = 14;
 							if (!isNaN(bitfield) && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
 								var i;
 								var newBitfield;
