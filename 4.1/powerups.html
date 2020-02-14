@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://fortress-blast.github.io/0.3/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
+			<div class="fb-topbar">
+				<table class="table">
+					<tbody><tr>
+						<script>
+							var url = new URLSearchParams(window.location.search);
+							var action = url.get('action');
+							var powerbit = url.get('powerups-enabled');
+							var gifthunt = url.get('gifthunt');
+							var ultra = url.get('ultra');
+							document.write('<th><a class="btn" href="index.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Introduction</span></a></th>');
+							document.write('<th><a class="btn selected" role="button"><span>Powerups</span></a></th>');
+							if (gifthunt != 0) {
+								document.write('<th><a class="btn" href="gifthunt.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Gift Hunt</span></a></th>');
+							}
+							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Credits</span></a></th>');
+						</script>
+						<noscript>
+							<th><a class="btn" href="index.html" role="button"><span>Introduction</span></a></th>
+							<th><a class="btn selected" role="button"><span>Powerups</span></a></th>
+							<th><a class="btn" href="gifthunt.html" role="button"><span>Gift Hunt</span></a></th>
+							<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
+						</noscript>
+					</tr></tbody>
+				</table>
+			</div>
+			<div class="fb-body">
+				<p>The following is a complete list of powerups active on the current server:</p>
+				<noscript><p><span style="color: #BD5610">Unfortunately, because you have JavaScript disabled, all powerups are currently listed.</span></p></noscript>
+				<table class="table">
+					<thead><tr>
+						<th scope="col">Powerup</th>
+						<th scope="col">Description</th>
+					</tr></thead>
+					<tbody>
+						<tr id="powerup-7">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_blast.png"><br>Blast</td>
+							<td>Upon use, Blast creates an explosion at your location, dealing damage to enemies and enemy buildings. Combine with other damage sources for quicker kills.</td>
+						</tr>
+						<tr id="powerup-14">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_dizzybomb.png"><br>Dizzy Bomb</td>
+							<td>The Dizzy Bomb powerup will affect nearby enemies, causing their screens to sway from side to side and impeding their movement for a short period of time.</td>
+						</tr>
+						<tr id="powerup-13">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_effectburst.png"><br>Effect Burst</td>
+							<td>Effect Burst causes nearby enemies to either bleed, combust, soak in jarate or soak in milk, randomly per afflicted player, and all for 10 seconds.</td>
+						</tr>
+						<tr id="powerup-9">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_frosttouch.png"><br>Frost Touch</td>
+							<td>Using Frost Touch allows you to turn enemies you touch into ice statues for 3 seconds. The powerup itself lasts 8 seconds, so make good use of it.</td>
+						</tr>
+						<tr id="powerup-5">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_gyrocopter.png"><br>Gyrocopter</td>
+							<td>The Gyrocopter powerup lowers your gravity to 25% for 5 seconds. This can be used to clear large gaps or reach new heights, if you are decent at parkour.</td>
+						</tr>
+						<tr id="powerup-12">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_magnetism.png"><br>Magnetism</td>
+							<td>For 5 seconds after using Magnetism, enemies will be repelled from you, unless you hold out your melee weapon, then enemies will be brought towards you.</td>
+						</tr>
+						<tr id="powerup-8">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_megamann.png"><br>Mega Mann</td>
+							<td>You become giant for 10 seconds after using Mega Mann, and are overhealed to 4 times your original health before use, up to 4 times your maximum health.</td>
+						</tr>
+						<tr id="powerup-2">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_shockabsorber.png"><br>Shock Absorber</td>
+							<td>Shock Absorber allows you to resist 75% of all damage and take no knockback for 5 seconds. Use this when trying to kill a player with a high push force.</td>
+						</tr>
+						<tr id="powerup-1">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_superbounce.png"><br>Super Bounce</td>
+							<td>Super Bounce reverses your fall speed when you touch the ground and you take no fall damage for 5 seconds. Use it from great heights to surprise your enemies.</td>
+						</tr>
+						<tr id="powerup-4">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_superjump.png"><br>Super Jump</td>
+							<td>Super Jump launches you into the air. If you jump before using this powerup, you will travel even higher, just watch out for fall damage.</td>
+						</tr>
+						<tr id="powerup-3">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_superspeed.png"><br>Super Speed</td>
+							<td>The Super Speed powerup drastically speeds up your movement, but wears off over time. It's great for dodging focused fire.</td>
+						</tr>
+						<tr id="powerup-11">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_teleportation.png"><br>Teleportation</td>
+							<td>Telelporation warps you to a random Engineer's active exit Teleporter on your team. If there aren't any, you will be respawned instead.</td>
+						</tr>
+						<tr id="powerup-6">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_timetravel.png"><br>Time Travel</td>
+							<td>Time Travel makes you invisible and fast for 3 seconds, but you cannot attack. Use this to your advantage to get past sentries and difficult opponents.</td>
+						</tr>
+						<tr id="powerup-10">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_mystery.png"><br>Mystery</td>
+							<td>Mystery is a completely randomised powerup. It can take on the effects of any other powerup when used. Are you feeling lucky?</td>
+						</tr>
+						<tr id="powerup-ultra">
+							<td class="name"><img src="https://fortress-blast.github.io/images/powerup_ultrapowerup.png"><br>ULTRA POWERUP!!</td>
+							<td>This very rare powerup will grant you Frost Touch, Magnetism, Shock Absorber, critical hits and Mega Mann health all at once and more, all for 10 seconds!</td>
+						</tr>
+						<script>
+							var url = new URLSearchParams(window.location.search);
+							var bitfield = url.get('powerups-enabled');
+							var ultra = url.get('ultra');
+							var numberOfPowerups = 14;
+							if (!isNaN(bitfield) && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
+								var i;
+								var newBitfield;
+								for (i = numberOfPowerups; i > 0; i--) {
+									newBitfield = bitfield % Math.pow(2, (i - 1));
+									if (newBitfield >= bitfield || ultra >= 100) {
+										var deleteThisElement = document.getElementById('powerup-' + i);
+										deleteThisElement.parentNode.removeChild(deleteThisElement);
+									}
+									bitfield = newBitfield;
+								}
+							} else {
+								var i;
+								for (i = numberOfPowerups; i > 0; i--) {
+									if (ultra >= 100) {
+										var deleteThisElement = document.getElementById('powerup-' + i);
+										deleteThisElement.parentNode.removeChild(deleteThisElement);
+									}
+								}
+							}
+							if (!isNaN(ultra) && ultra <= 0) {
+								var deleteThisElement = document.getElementById('powerup-ultra');
+								deleteThisElement.parentNode.removeChild(deleteThisElement);
+							}
+						</script>
+					</tbody>
+				</table>
+				<footer>
+					<hr>
+					<p>&copy; <script>document.write(new Date().getFullYear())</script> Naleksuh & Jack5. MOTD design by Jack5.</p>
+				</footer>
+			</div>
+			<img src="https://fortress-blast.github.io/images/emblem.png" class="fb-emblem">
+		</div>
+	</body>
+</html>
