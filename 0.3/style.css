@@ -109,9 +109,14 @@ p, ul, th, td, .btn {
 	text-decoration: underline;
 }
 
+.fb-body table td {
+	vertical-align: middle;
+}
+
 .fb-body table img {
 	width: 90px;
 	height: 90px;
+	margin-bottom: 0px;
 }
 
 .fb-body table .name {
