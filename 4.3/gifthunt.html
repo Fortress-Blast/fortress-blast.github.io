@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://fortress-blast.github.io/0.3/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
+			<div class="fb-topbar">
+				<table class="table">
+					<tbody><tr>
+						<script>
+							var url = new URLSearchParams(window.location.search);
+							var action = url.get('action');
+							var powerbit = url.get('powerups-enabled');
+							var gifthunt = url.get('gifthunt');
+							var ultra = url.get('ultra');
+							document.write('<th><a class="btn" href="index.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Introduction</span></a></th>');
+							document.write('<th><a class="btn" href="powerups.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Powerups</span></a></th>');
+							document.write('<th><a class="btn selected" role="button"><span>Gift Hunt</span></a></th>');
+							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Credits</span></a></th>');
+						</script>
+						<noscript>
+							<th><a class="btn" href="index.html" role="button"><span>Introduction</span></a></th>
+							<th><a class="btn" href="powerups.html" role="button"><span>Powerups</span></a></th>
+							<th><a class="btn selected" role="button"><span>Gift Hunt</span></a></th>
+							<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
+						</noscript>
+					</tr></tbody>
+				</table>
+			</div>
+			<div class="fb-body">
+				<div class="gift"><img src="https://fortress-blast.github.io/images/gift.png"></div>
+				<p><span style="color: white;">Gift Hunt</span> is an exclusive mini game mode that runs inside Fortress Blast and supports a wide variety of map game modes including Capture the Flag, Control Points, King of the Hill and Payload Race.<noscript> <span style="color: #BD5610">Unfortunately, because you have JavaScript disabled, it is not known whether this server is currently running Gift Hunt or not.</span></noscript></p>
+				<p>In this mini game mode, small gifts appear randomly around the map and the map's objectives start off locked. It's your job to <span style="color: white;">collect the required number of gifts and then complete the objective before the other team</span>. Only once all the gifts on the map have been collected will more appear.</p>
+				<p>On one-sided maps, such as Attack/Defense and Payload, gifts do not spawn until setup time is over and the round timer starts paused. If the BLU team collects the required number of gifts, the objective will unlock as normal, but if the RED team does so, the round timer will start ticking down.</p>
+				<footer>
+					<hr>
+					<p>&copy; <script>document.write(new Date().getFullYear())</script> Fortress Blast team. MOTD design by Jack5.</p>
+				</footer>
+			</div>
+			<img src="https://fortress-blast.github.io/images/emblem.png" class="fb-emblem">
+		</div>
+	</body>
+</html>
