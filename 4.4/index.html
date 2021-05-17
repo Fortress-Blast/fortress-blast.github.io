@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="https://fortress-blast.github.io/0.3/style.css">
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	</head>
+	<body>
+		<div class="container-fluid">
+			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
+			<div class="fb-topbar">
+				<table class="table">
+					<tbody><tr>
+						<script>
+							var url = new URLSearchParams(window.location.search);
+							var action = url.get('action');
+							var powerbit = url.get('powerups-enabled');
+							var gifthunt = url.get('gifthunt');
+							var ultra = url.get('ultra');
+							document.write('<th><a class="btn selected" role="button"><span>Introduction</span></a></th>');
+							document.write('<th><a class="btn" href="powerups.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Powerups</span></a></th>');
+							if (gifthunt != 0) {
+								document.write('<th><a class="btn" href="gifthunt.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Gift Hunt</span></a></th>');
+							}
+							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Credits</span></a></th>');
+						</script>
+						<noscript>
+							<th><a class="btn selected" role="button"><span>Introduction</span></a></th>
+							<th><a class="btn" href="powerups.html" role="button"><span>Powerups</span></a></th>
+							<th><a class="btn" href="gifthunt.html" role="button"><span>Gift Hunt</span></a></th>
+							<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
+						</noscript>
+					</tr></tbody>
+				</table>
+			</div>
+			<div class="fb-body">
+				<p>Fortress Blast adds collectable powerups from the Marble Blast series into Team Fortress 2 gameplay. Each powerup has a special ability that can be activated for a short amount of time.</p>
+				<script>
+					var url = new URLSearchParams(window.location.search);
+					var action = url.get('action');
+					if (action == "attack" || action == "jump" || action == "duck" || action == "forward" || action == "back" || action == "use" || action == "cancel" || action == "left" || action == "right" || action == "moveleft" || action == "moveright" || action == "attack2" || action == "run" || action == "reload" || action == "alt1" || action == "alt2" || action == "score" || action == "speed" || action == "walk" || action == "zoom" || action == "weapon1" || action == "weapon2" || action == "bullrush" || action == "grenade1" || action == "grenade2") {
+						document.write('<p>You can see your collected powerup on the right side of your HUD in-game. Perform the <span style="color: white;">' + action + '</span> action to use it.</p>');
+					} else {
+						document.write('<p>You can see your collected powerup on the right side of your HUD in-game. Press the <span style="color: white;">&#39Special attack&#39</span> key to use it. This bind is set to <span style="color: white;">MOUSE3</span> by default, but you can change this in TF2&#39s Options.</p>');
+					}
+				</script>
+				<noscript><p>You can see your collected powerup on the right side of your HUD in-game. Press the <span style="color: white;">'Special attack'</span> key to use it. This bind is set to <span style="color: white;">MOUSE3</span> by default, but you can change this in TF2's Options. <span style="color: #BD5610">Unfortunately, because you have JavaScript disabled, this key may be used for something else on the current server, in which case the required action will be displayed in chat when you press Special attack.</span></p></noscript>
+				<p>Click the tabs above to learn more about this server mod.</p>
+				<p>You can host Fortress Blast on your own server by visiting <span style="color: white;">https://github.com/Fortress-Blast</span>. Follow the instructions on <span style="color: white;">https://fortressblast.miraheze.org</span> before installing.</p>
+				<footer>
+					<hr>
+					<p>&copy; <script>document.write(new Date().getFullYear())</script> Fortress Blast team. MOTD design by Jack5.</p>
+				</footer>
+			</div>
+			<img src="https://fortress-blast.github.io/images/emblem.png" class="fb-emblem">
+		</div>
+	</body>
+</html>
