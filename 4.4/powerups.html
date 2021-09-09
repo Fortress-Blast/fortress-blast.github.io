@@ -57,6 +57,11 @@
 							<td>Blast</td>
 							<td>Upon use, Blast creates an explosion at your location, dealing damage to enemies and enemy buildings. Combine with other damage sources for quicker kills.</td>
 						</tr>
+						<tr id="powerup-17">
+							<td></td>
+							<td>Catapult</td>
+							<td>Catapult launches you at a slight upward angle in the approximate direction you're looking. Use this powerup to quickly drop into where your enemies are positioned.</td>
+						</tr>
 						<tr id="powerup-14">
 							<td><img src="https://fortress-blast.github.io/images/powerup_dizzybomb.png"></td>
 							<td>Dizzy Bomb</td>
@@ -71,6 +76,11 @@
 							<td><img src="https://fortress-blast.github.io/images/powerup_frosttouch.png"></td>
 							<td>Frost Touch</td>
 							<td>Using Frost Touch allows you to turn enemies you touch into ice statues for 3 seconds. The powerup itself lasts 8 seconds, so make good use of it.</td>
+						</tr>
+						<tr id="powerup-16">
+							<td></td>
+							<td>Ghost</td>
+							<td>You become a ghost for 5 seconds and stun any enemy near you for 2 seconds after using this powerup. Can also be used to float to unreachable places.</td>
 						</tr>
 						<tr id="powerup-5">
 							<td><img src="https://fortress-blast.github.io/images/powerup_gyrocopter.png"></td>
@@ -131,7 +141,7 @@
 							var url = new URLSearchParams(window.location.search);
 							var bitfield = url.get('powerups-enabled');
 							var ultra = url.get('ultra');
-							var numberOfPowerups = 15;
+							var numberOfPowerups = 17;
 							if (!isNaN(bitfield) && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
 								var i;
 								var newBitfield;
