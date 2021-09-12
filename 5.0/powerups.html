@@ -9,31 +9,36 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</head>
+	<script>
+	var url = new URLSearchParams(window.location.search);
+	var action = url.get('action');
+	var powerbit = url.get('powerups-enabled');
+	var gifthunt = url.get('gifthunt');
+	var ultra = url.get('ultra');
+	function URLParameters(){
+		return '?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '&scream=' + scream;
+	}
+	</script>
 	<body>
 		<div class="container-fluid">
 			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
 			<div class="fb-topbar">
 				<table class="table">
-					<tbody><tr>
-						<script>
+					<tbody><tr>	
+						<th><a class="btn" href="index.html" role="button" id="tab_introduction"><span>Introduction</span></a></th>
+						<th><a class="btn selected" role="button"><span>Powerups</span></a></th>
+						<th><a class="btn" href="gifthunt.html" role="button"><span>Gift Hunt</span></a></th>
+						<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
+							<script>
+							document.getElementById("tab_introduction").a.href = document.getElementById("tab_introduction").a.href + URLParameters();
 							/*
-							var url = new URLSearchParams(window.location.search);
-							var action = url.get('action');
-							var powerbit = url.get('powerups-enabled');
-							var gifthunt = url.get('gifthunt');
-							var ultra = url.get('ultra');
-							document.write('<th><a class="btn" href="index.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Introduction</span></a></th>');
 							document.write('<th><a class="btn selected" role="button"><span>Powerups</span></a></th>');
 							if (gifthunt != 0) {
 								document.write('<th><a class="btn" href="gifthunt.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Gift Hunt</span></a></th>');
 							}
-							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Credits</span></a></th>');
-							*/					
-						</script>	
-						<th><a class="btn" href="index.html" role="button"><span>Introduction</span></a></th>
-						<th><a class="btn selected" role="button"><span>Powerups</span></a></th>
-						<th><a class="btn" href="gifthunt.html" role="button"><span>Gift Hunt</span></a></th>
-						<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
+							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Credits</span></a></th>');					
+							*/
+						</script>
 					</tr></tbody>
 				</table>
 			</div>
