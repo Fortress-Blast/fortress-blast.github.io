@@ -13,7 +13,7 @@
 			if (url.get("powerups-enabled") == null && url.get("action") == null && url.get("gifthunt") == null && url.get("ultra") == null && url.get("scream") == null) {
 				urlparameters = "";
 			} else {
-				urlparameters = '?powerups-enabled=' + url.get("powerups-enabled") + '&action=' + url.get("action") + '&gifthunt=' + url.get("gifthunt") + '&ultra=' + url.get("ultra") + '&scream=' + url.get("scream");
+				urlparameters = '?powerups-enabled=' + url.get("powerups-enabled") + '&action=' + url.get("action") + '&gifthunt=' + url.get("gifthunt") + '&ultra=' + url.get("ultra") + (url.get("scream") == 1 ? "&scream=1" : "");
 			}
 		</script>
 	</head>
