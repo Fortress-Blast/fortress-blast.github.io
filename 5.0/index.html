@@ -32,16 +32,16 @@
 			</div>
 			<div class="fb-body">
 				<p>Fortress Blast adds collectable powerups from the Marble Blast series into Team Fortress 2 gameplay. Each powerup has a special ability that can be activated for a short amount of time.</p>
+				<p>You can see your collected powerup on the right side of your HUD in-game.<span id="powerupinstruct"></span></p>
 				<script>
 					var url = new URLSearchParams(window.location.search);
 					var action = url.get('action');
 					if (action == "attack" || action == "jump" || action == "duck" || action == "forward" || action == "back" || action == "use" || action == "cancel" || action == "left" || action == "right" || action == "moveleft" || action == "moveright" || action == "attack2" || action == "run" || action == "reload" || action == "alt1" || action == "alt2" || action == "score" || action == "speed" || action == "walk" || action == "zoom" || action == "weapon1" || action == "weapon2" || action == "bullrush" || action == "grenade1" || action == "grenade2") {
-						document.write('<p>You can see your collected powerup on the right side of your HUD in-game. Perform the <span style="color: white;">' + action + '</span> action to use it.</p>');
+						document.getElementBy("powerupinstruct").innerHTML = 'Perform the <span style="color: white;">' + action + '</span> action to use it.</p>';
 					} else {
-						document.write('<p>You can see your collected powerup on the right side of your HUD in-game. Press the <span style="color: white;">&#39Special attack&#39</span> key to use it. This bind is set to <span style="color: white;">MOUSE3</span> by default, but you can change this in TF2&#39s Options.</p>');
+						document.getElementBy("powerupinstruct").innerHTML = '<p>You can see your collected powerup on the right side of your HUD in-game. Press the <span style="color: white;">&#39Special attack&#39</span> key to use it. This bind is set to <span style="color: white;">MOUSE3</span> by default, but you can change this in TF2&#39s Options.</p>';
 					}
 				</script>
-				<noscript><p>You can see your collected powerup on the right side of your HUD in-game. Press the <span style="color: white;">'Special attack'</span> key to use it. This bind is set to <span style="color: white;">MOUSE3</span> by default, but you can change this in TF2's Options. <span style="color: #BD5610">Unfortunately, because you have JavaScript disabled, this key may be used for something else on the current server, in which case the required action will be displayed in chat when you press Special attack.</span></p></noscript>
 				<p>Click the tabs above to learn more about this server mod.</p>
 				<p>You can host Fortress Blast on your own server by visiting <a href="https://github.com/Fortress-Blast"><span style="color: white;">https://github.com/Fortress-Blast</span></a>. Follow the instructions on <a href="https://fortressblast.miraheze.org"><span style="color: white;">https://fortressblast.miraheze.org</span></a> before installing.</p>
 				<footer>
