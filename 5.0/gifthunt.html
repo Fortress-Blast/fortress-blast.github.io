@@ -14,6 +14,9 @@
 				urlparameters = "";
 			} else {
 				urlparameters = '?powerups-enabled=' + url.get("powerups-enabled") + '&action=' + url.get("action") + '&gifthunt=' + url.get("gifthunt") + '&ultra=' + url.get("ultra") + (url.get("scream") == 1 ? "&scream=1" : "");
+				if (url.get("scream") != null) {
+					document.body.style.backgroundImage = 'url("https://fortress-blast.github.io/images/background-scream.jpg")';
+				}
 			}
 		</script>
 	</head>
