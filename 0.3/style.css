@@ -39,6 +39,7 @@ img {
 }
 
 p, ul, th, td, .btn {
+	color: black;
 	font-family: "Dom Casual", Arial, sans-serif;
 	font-size: 30px;
 	letter-spacing: -2px;

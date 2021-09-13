@@ -2,6 +2,10 @@ body {
 	background-image: url("https://fortress-blast.github.io/images/background_scream.jpg");
 }
 
+p, ul, th, td, .btn {
+	color: #CCCCCC;
+}
+
 .fb-topbar table .btn {
 	background-color: #28292B;
 	box-shadow: 2px -1px 5px rgba(0, 0, 0, 0.5) inset, -2px 6px 5px white inset;
