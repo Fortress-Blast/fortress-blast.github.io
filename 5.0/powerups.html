@@ -138,6 +138,7 @@
 							<td>This very rare powerup will grant you Frost Touch, Magnetism, Shock Absorber, critical hits and Mega Mann health all at once and more, all for 10 seconds!</td>
 						</tr>
 						<script>
+							url = new URLSearchParams(window.location.search);
 							var bitfield = url.get('powerups-enabled');
 							var ultra = url.get('ultra');
 							var numberOfPowerups = 17;
