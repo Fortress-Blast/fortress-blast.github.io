@@ -14,26 +14,19 @@
 			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
 			<div class="fb-topbar">
 				<table class="table">
-					<tbody><tr>
-						<script>
-							var url = new URLSearchParams(window.location.search);
-							var action = url.get('action');
-							var powerbit = url.get('powerups-enabled');
-							var gifthunt = url.get('gifthunt');
-							var ultra = url.get('ultra');
-							document.write('<th><a class="btn selected" role="button"><span>Introduction</span></a></th>');
-							document.write('<th><a class="btn" href="powerups.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Powerups</span></a></th>');
-							if (gifthunt != 0) {
-								document.write('<th><a class="btn" href="gifthunt.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Gift Hunt</span></a></th>');
+					<tbody><tr>	
+						<th><a class="btn selected" role="button"><span>Introduction</span></a></th>
+						<th><a class="btn" href="powerups.html" role="button" id="tab_powerups"><span>Powerups</span></a></th>
+						<th><a class="btn" href="gifthunt.html" role="button" id="tab_gifthunt"><span>Gift Hunt</span></a></th>
+						<th><a class="btn" href="credits.html" role="button" id="tab_credits"><span>Credits</span></a></th>
+							<script>
+							document.getElementById("tab_powerups").href = document.getElementById("tab_powerups").href + urlparameters;
+							document.getElementById("tab_gifthunt").href = document.getElementById("tab_gifthunt").href + urlparameters;
+							if(url.get("gifthunt") == 0){
+								document.getElementById("tab_gifthunt").remove();
 							}
-							document.write('<th><a class="btn" href="credits.html?powerups-enabled=' + powerbit + '&action=' + action + '&gifthunt=' + gifthunt + '&ultra=' + ultra + '" role="button"><span>Credits</span></a></th>');
+							document.getElementById("tab_credits").href = document.getElementById("tab_credits").href + urlparameters;
 						</script>
-						<noscript>
-							<th><a class="btn selected" role="button"><span>Introduction</span></a></th>
-							<th><a class="btn" href="powerups.html" role="button"><span>Powerups</span></a></th>
-							<th><a class="btn" href="gifthunt.html" role="button"><span>Gift Hunt</span></a></th>
-							<th><a class="btn" href="credits.html" role="button"><span>Credits</span></a></th>
-						</noscript>
 					</tr></tbody>
 				</table>
 			</div>
@@ -53,7 +46,7 @@
 				<p>You can host Fortress Blast on your own server by visiting <a href="https://github.com/Fortress-Blast"><span style="color: white;">https://github.com/Fortress-Blast</span></a>. Follow the instructions on <a href="https://fortressblast.miraheze.org"><span style="color: white;">https://fortressblast.miraheze.org</span></a> before installing.</p>
 				<footer>
 					<hr>
-					<p>&copy; <script>document.write(new Date().getFullYear())</script> Fortress Blast team. MOTD design by Jack5.</p>
+					<p>&copy; <span id="copyyear">2021</span><script>document.getElementById("copyyear").innerHTML=new Date().getFullYear()</script> Fortress Blast team. MOTD design by Jack5 and Naleksuh.</p>
 				</footer>
 			</div>
 			<img src="https://fortress-blast.github.io/images/emblem.png" class="fb-emblem">
