@@ -8,29 +8,29 @@
 		<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+		<script>
+			url = new URLSearchParams(window.location.search);
+			urlparameters = '?powerups-enabled=' + url.get("powerups-enabled") + '&action=' + url.get("action") + '&gifthunt=' + url.get("gifthunt") + '&ultra=' + url.get("ultra") + '&scream=' + url.get("scream");
+			if (url.get("powerups-enabled") == null) {
+				urlparameters = "";
+			}
+		</script>
 	</head>
 	<body>
-	<script>
-		url = new URLSearchParams(window.location.search);
-		urlparameters = '?powerups-enabled=' + url.get("powerups-enabled") + '&action=' + url.get("action") + '&gifthunt=' + url.get("gifthunt") + '&ultra=' + url.get("ultra") + '&scream=' + url.get("scream");
-		if(url.get("powerups-enabled") == null){
-			urlparameters = "";
-		}
-	</script>
 		<div class="container-fluid">
 			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
 			<div class="fb-topbar">
 				<table class="table">
-					<tbody><tr>	
+					<tbody><tr>
 						<th><a class="btn" href="index.html" role="button" id="tab_introduction"><span>Introduction</span></a></th>
 						<th><a class="btn" href="powerups.html" role="button" id="tab_powerups"><span>Powerups</span></a></th>
 						<th><a class="btn" href="gifthunt.html" role="button" id="tab_gifthunt"><span>Gift Hunt</span></a></th>
 						<th><a class="btn selected" role="button"><span>Credits</span></a></th>
-							<script>
+						<script>
 							document.getElementById("tab_introduction").href = document.getElementById("tab_introduction").href + urlparameters;
 							document.getElementById("tab_powerups").href = document.getElementById("tab_powerups").href + urlparameters;
 							document.getElementById("tab_gifthunt").href = document.getElementById("tab_gifthunt").href + urlparameters;
-							if(url.get("gifthunt") == 0){
+							if (url.get("gifthunt") == 0) {
 								document.getElementById("tab_gifthunt").remove();
 							}
 						</script>
@@ -41,7 +41,7 @@
 				<p>Fortress Blast is brought to you by the following people:</p>
 				<ul>
 					<li>Jack5 - Concept, design, graphics and testing</li>
-					<li>Naleksuh - Programming, design, and testing</li>
+					<li>Naleksuh - Programming, design and testing</li>
 				</ul>
 				<p>This server mod would also not be possible without these games, groups and people:</p>
 				<ul>
@@ -58,7 +58,8 @@
 				</ul>
 				<footer>
 					<hr>
-					<p>&copy; <span id="copyyear"></span><script>document.getElementById("copyyear").innerHTML=new Date().getFullYear()</script> Fortress Blast team. MOTD design by Jack5 and Naleksuh.</p>
+					<p>&copy; <span id="copyyear"></span>Fortress Blast team. MOTD design by Jack5.</p>
+					<script>document.getElementById("copyyear").innerHTML = new Date().getFullYear().concat(" ");</script>
 				</footer>
 			</div>
 			<img src="https://fortress-blast.github.io/images/emblem.png" class="fb-emblem">
