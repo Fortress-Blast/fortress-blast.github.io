@@ -10,6 +10,13 @@
 		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 	</head>
 	<body>
+	<script>
+		url = new URLSearchParams(window.location.search);
+		urlparameters = '?powerups-enabled=' + url.get("powerups-enabled") + '&action=' + url.get("action") + '&gifthunt=' + url.get("gifthunt") + '&ultra=' + url.get("ultra") + '&scream=' + url.get("scream");
+		if(url.get("powerups-enabled") == null){
+			urlparameters = "";
+		}
+	</script>
 		<div class="container-fluid">
 			<img src="https://fortress-blast.github.io/images/logo.png" class="fb-logo">
 			<div class="fb-topbar">
