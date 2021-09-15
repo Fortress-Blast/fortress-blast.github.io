@@ -170,8 +170,8 @@
 								}
 							} else {
 								var i;
-								for (i = numberOfPowerups; i > 0; i--) {
-									if (ultra != null && ultra >= 100) {
+								if (ultra != null && ultra >= 100) {
+									for (i = numberOfPowerups; i > 0; i--) {
 										var deleteThisElement = document.getElementById('powerup-' + i);
 										deleteThisElement.parentNode.removeChild(deleteThisElement);
 									}
