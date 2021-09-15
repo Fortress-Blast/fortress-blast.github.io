@@ -148,9 +148,16 @@
 						<script>
 							url = new URLSearchParams(window.location.search);
 							var bitfield = url.get('powerups-enabled');
+							if (isNaN(bitfield)) {
+								bitfield = null;
+							}
 							var ultra = url.get('ultra');
+							if (isNaN(ultra)) {
+								ultra = null;
+							}
+							var scream = url.get('scream');
 							var numberOfPowerups = 17;
-							if (!isNaN(bitfield) && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
+							if (bitfield != null && bitfield > 0 && bitfield < (Math.pow(2, numberOfPowerups) - 1)) {
 								var i;
 								var newBitfield;
 								for (i = numberOfPowerups; i > 0; i--) {
@@ -164,17 +171,17 @@
 							} else {
 								var i;
 								for (i = numberOfPowerups; i > 0; i--) {
-									if (ultra >= 100) {
+									if (ultra != null && ultra >= 100) {
 										var deleteThisElement = document.getElementById('powerup-' + i);
 										deleteThisElement.parentNode.removeChild(deleteThisElement);
 									}
 								}
 							}
-							if (!isNaN(ultra) && ultra <= 0) {
+							if (ultra != null && ultra <= 0) {
 								var deleteThisElement = document.getElementById('powerup');
 								deleteThisElement.parentNode.removeChild(deleteThisElement);
 							}
-							if (url.get("scream") != 1) {
+							if (scream == null) {
 								document.getElementById("powerup-16").remove();
 							}
 						</script>
