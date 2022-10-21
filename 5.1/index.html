@@ -37,7 +37,7 @@
 						<script>
 							document.getElementById("tab_powerups").href = document.getElementById("tab_powerups").href + urlparameters;
 							document.getElementById("tab_gifthunt").href = document.getElementById("tab_gifthunt").href + urlparameters;
-							if (url.get("gifthunt") == 0) {
+							if (url.get("gifthunt") != 1) {
 								document.getElementById("tab_gifthunt").remove();
 							}
 							document.getElementById("tab_credits").href = document.getElementById("tab_credits").href + urlparameters;
