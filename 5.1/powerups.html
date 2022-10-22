@@ -22,6 +22,15 @@
 					document.head.appendChild(screamStyle);
 				}
 			}
+			function ReplaceAllElements(class, text){
+				if(url.get("fools") == null){
+					return;
+				}
+				var list = document.getElementsByClassName(class);
+				for(var i = 0 ; i < list ; i++){
+					list[i].innerHTML = text;
+				}
+			}
 		</script>
 	</head>
 	<body>
@@ -57,15 +66,15 @@
 					<tbody>
 						<tr id="powerup-15">
 							<td><img src="https://fortress-blast.github.io/images/powerup_becomesentry.png"></td>
-							<td id="name-15">Become Sentry</td>
-              						<script>if(url.get("fools") != null){document.getElementById("name-15").innerHTML="Super Sentry"}</script>
+							<td class="name-15">Become Sentry</td>
 							<td>You will transform into a Level 2 Sentry upon using this powerup, but be wary of sappers. Jumping or attacking will return control to you.</td>
+							<script>ReplaceAllWith("name-15", "Super Sentry");</script>
 						</tr>
 						<tr id="powerup-7">
 							<td><img src="https://fortress-blast.github.io/images/powerup_blast.png"></td>
-							<td id="name-7">Blast</td>
-							<script>if(url.get("fools") != null){document.getElementById("name-7").innerHTML="Super Blast"}</script>
-							<td>Upon use, Blast creates an explosion at your location, dealing damage to enemies and enemy buildings. Combine with other damage sources for quicker kills.</td>
+							<td class="name-7">Blast</td>
+							<td>Upon use, <span class="name-7">Blast</span> creates an explosion at your location, dealing damage to enemies and enemy buildings. Combine with other damage sources for quicker kills.</td>
+							<script>ReplaceAllWith("name-7", "Super Blast");</script>
 						</tr>
 						<tr id="powerup-17">
 							<td><img src="https://fortress-blast.github.io/images/powerup_catapult.png"></td>
