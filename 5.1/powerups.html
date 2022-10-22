@@ -22,12 +22,12 @@
 					document.head.appendChild(screamStyle);
 				}
 			}
-			function ReplaceAllElements(class, text){
+			function ReplaceAllElements(classname, text){
 				if(url.get("fools") == null){
 					return;
 				}
-				var list = document.getElementsByClassName(class);
-				for(var i = 0 ; i < list ; i++){
+				var list = document.getElementsByClassName(classname);
+				for(var i = 0 ; i < list.length ; i++){
 					list[i].innerHTML = text;
 				}
 			}
